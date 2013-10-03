@@ -1,0 +1,83 @@
+body{
+  font-family: tahoma, arial, verdana, helvetica, sans-serif;
+  font-size: 12px;
+}
+
+header{
+  background: url('http://www.sciencemag.org/site/multimedia/components/slider/hd-curl-shadow.jpg') no-repeat bottom left;
+  background-color: white;
+  height: 80px;
+  top:0px;
+  left:50%;
+  margin-left:-400px;
+  position: absolute;
+  width: 800px;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.02) inset, 0px -5px 5px rgba(0, 0, 0, 0.02); /*inset;*/
+  z-index: 8888;
+}
+
+header a {
+  color: #999;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.sci-logo {
+  height: 30px;
+  left: 24px;
+  position: relative;
+  top: 10px;
+  width: 60px;
+}
+
+.mag-link {
+  left: 90px;
+  position: absolute;
+  top: 10px;
+}
+
+.add-this {
+  position: absolute;
+  right: 24px;
+  top: 14px;
+}
+.photo-interactive {
+  background: url(http://www.sciencemag.org/site/multimedia/components/slider/ttl_interactive.png) no-repeat;
+  height: 49px;
+  left: 275px;
+  position: absolute;
+  top: 5px;
+  width: 245px;
+}
+
+.photo-interactive span {
+  display: block;
+  text-indent: -9998em;
+}
+article {
+    background-color: white;
+    position:absolute;
+    top:80px;
+    left: 0px;
+    width:100%;
+    padding-top: 15px;
+    border-radius: 0px 0px 4px 4px;
+}
+article h1 {
+  color: #d60101;
+  font: 30px/1.3 bold georgia, serif;
+  margin: 0;
+  text-align: center;
+}
+article h5 {
+    text-align: center;
+    color: rgb(210, 210, 210);
+    position: absolute;
+    bottom: -50px;
+    width:100%;
+    text-align: center;
+}
+article .author {
+  display: block;
+  text-align: center;
+}

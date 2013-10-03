@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+
+<meta charset="utf-8">
+
+<head>
+
+    <title>Who does peer review?</title>
+
+    <!-- STYLES-->
+    <!--  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"> --> <!-- http://bootswatch.com/slate/# -->  
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,300,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css">
+
+    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="css/header.css">
+    <link rel="stylesheet" type="text/css" href="css/leaflet.css">
+    <link rel="stylesheet" type="text/css" href="css/globe.css">
+
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="http://www.sciencemag.org/favicon.ico" />  
+
+</head>
+
+<body>
+
+
+    <div class="container">
+        <div class="map"></div>             
+
+        <div class="element journal">
+            <div class="journal_info">    
+            <div class="journal-title"><h4>Journal:</h4></div>
+            <div class="journal-publisher"><b>Publisher:</b></div>
+            <div class="paper-id"><b>Paper:</b></div>
+            <div class="journal-status"><b>Status:</b></div>
+            
+            <div class="geo-bank"><b>Bank:</b></div>
+            <div class="geo-editor"><b>Editor:</b></div>
+            <div class="geo-publisher"><b>Publisher:</b></div>
+            
+            <div class="journal-correspondence">
+                <h5>Email & Attachments</h5>
+                Click on a point or a link on the map to see more information about each submitted paper. All emails and submitted papers are listed.
+            </div>    
+            <div class="journal-article">Return to <a href="http://www.sciencemag.org/content/342/6154/60.full">article</a></div>
+        </div>         
+           
+        </div>
+
+         <div class="filters">
+                <div class="acc-rej">                
+                    <button type="button" class="btn-acc status btn btn-custom-lighten btn-default active">Accepted</button>
+                    <button type="button" class="btn-rej status btn btn-custom-lighten btn-default active">Rejected</button>
+                </div>
+                <div class="categories">            
+                    <button type="button" class="btn-bank status btn btn-custom-lighten btn-default active">Bank</button>
+                    <button type="button" class="btn-editor status btn btn-custom-lighten btn-default active">Editor</button>
+                    <button type="button" class="btn-publisher status btn btn-custom-lighten btn-default active">Publisher</button>
+                </div>
+                 <div class="explain">Show and hide parts of the network by clicking these buttons</div>
+            </div>
+
+
+        <!-- controls (from Leaflet) -->
+        <div class="controls leaflet-top leaflet-left">
+            <div class="leaflet-control-zoom leaflet-bar leaflet-control">
+                <a class="leaflet-control-zoom-in" href="#" title="Zoom in">+</a>
+                <a class="leaflet-control-zoom-out" href="#" title="Zoom out">-</a>
+            </div>
+        </div>
+
+        <div class="credits">Made by <a href="https://twitter.com/djq" target="_blank">David Quinn</a> and <a href="https://twitter.com/dwiesmi" target="_blank">Daniel Wiesmann</a> using <a href="http://d3js.org/" target="_blank">D3</a>, drawing on code from <a href="http://bl.ocks.org/dwtkns/4973620/" target="_blank">Derek Watkins</a>. Download <a href="https://github.com/djq/science_open_access_viz" target="_blank">source</a></div>
+
+         <div class="copyright" style="clear:both;">
+            <p><a href="http://www.sciencemag.org/help/about/copyright.dtl">Copyright 2013</a> American Association for the Advancement of Science.&nbsp;All Rights Reserved.
+            </p>
+        </div>  
+    </div>
+
+    <div class="show-header"> 
+        <button type="button" class="btn-header status btn btn-custom-lighten btn-default active">
+            Information
+        </button>
+    </div>
+
+    <div class="welcome"></div>
+
+    <header>
+
+        <div class="sci-logo"><img src="http://www.sciencemag.org/site/multimedia/components/slider/science-logo-small.gif" alt="Science / AAAS"></div>
+        <div class="photo-interactive"><span>Interactive Feature</span></div>
+        <div class="mag-link"><a href="http://www.sciencemag.org"><span><em>Science</em> Home Page</span></a></div>
+        <div class="add-this">
+          <a href="http://www.addthis.com/bookmark.php?v=250&amp;username=xa-4bd5b4c70c3c96b4" class="addthis_button"><img src="http://s7.addthis.com/static/btn/v2/lg-share-en.gif" width="125" height="16" alt="Bookmark and Share" style="border:0" /></a>
+          <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#username=xa-4bd5b4c70c3c96b4"></script>
+        </div>
+
+        <article>
+          <h1>Who Does Peer Review?</h1>
+          <span class="author">John Bohannon</span>
+
+          <p style="text-align: center; margin: 4em;">
+            Between January and June 2013, Science contributing correspondent John Bohannon submitted 304 fake research papers to open access journals. The papers were designed with such grave scientific flaws that they should have been rejected immediately by editors and peer reviewers. 
+
+            This map shows which journals accepted or rejected the papers, along with the email correspondences that led to those outcomes. Using data from email IP addresses and bank invoices, it also compares the countries where publishers claim to be with the location of their editors and bank accounts--information that is frequently obscured by open access publishers. 
+
+            Read the full report here: <a href="http://www.sciencemag.org/content/342/6154/60.full">www.sciencemag.org/content/342/6154/60.full</a>
+          </p>
+
+          <h5>Click anywhere to start exploring.</h5>
+
+        </article>
+    </header>
+
+    <div class="legend">
+        <img src="img/legend.png" alt="legend"></div>
+    </div>
+
+</body>
+
+<!-- jquery + bootstrap -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" ></script>
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+
+<!-- d3 libraries et al-->
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script src="http://d3js.org/queue.v1.min.js"></script>
+<script src="http://d3js.org/topojson.v0.min.js"></script>  
+
+<!-- data -->
+<script src="data/journal_files.json"></script>
+<script src="data/journal_metadata.json"></script>
+
+<!-- additional info -->
+<script src="data/values.json"></script>
+
+<!-- email formatters -->
+<script src="js/formatting.js"></script>
+
+<!-- filtering -->
+<script src="js/filtering.js"></script>
+
+<script>
+$(function() {
+    // explanations
+    $('.btn-acc').hover(function(){
+      $('.explain').html("Show/Hide accepted papers")
+    });
+    $('.btn-rej').hover(function(){
+      $('.explain').html("Show/Hide rejected papers")
+    });
+
+    // explanations
+    $('.btn-bank').hover(function(){
+      $('.explain').html("Show/Hide bank locations")
+    });
+
+    $('.btn-editor').hover(function(){
+      $('.explain').html("Show/Hide editor locations")
+    });
+
+    $('.btn-publisher').hover(function(){
+      $('.explain').html("Show/Hide publisher locations")
+    });
+    
+    $('header,.welcome').click(function(){
+        $('header,.welcome').fadeOut();
+    });
+    $('.show-header').click(function(){
+        $('header,.welcome').fadeIn();
+    });
+
+});
+
+</script>
+
+<script type="text/javascript">
+
+ var _gaq = _gaq || [];
+ _gaq.push(['_setAccount', 'UA-2369900-15']);
+ _gaq.push(['_setDomainName', 'scimagdev.org']);
+ _gaq.push(['_trackPageview']);
+
+ (function() {
+   var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+   ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+   var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+ })();
+
+</script>
+
+<!-- globe -->
+<script src="js/makeMap.js"></script>
+
+
+</html>
